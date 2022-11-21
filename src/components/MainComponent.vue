@@ -21,6 +21,10 @@
    <section class="section-learning">
         <LearningComponent />
    </section>
+
+   <section class="section-popular-courses">
+        <PopularCourses/>
+   </section>
 </template>
 
 <script>
@@ -29,6 +33,7 @@ import EmpoweringComponent from './main_section/EmpoweringComponent.vue';
 import HomeTutoring from './main_section/HomeTutoring.vue';
 import TestimonialsComponent from './main_section/TestimonialsComponent.vue';
 import LearningComponent from './main_section/LearningComponent.vue';
+import PopularCourses from './main_section/PopularCourses.vue';
 
     export default {
     name: "MainComponent",
@@ -67,14 +72,19 @@ import LearningComponent from './main_section/LearningComponent.vue';
     HomeTutoring,
     EmpoweringComponent,
     TestimonialsComponent,
-    LearningComponent
-}
+    LearningComponent,
+    PopularCourses
+    },
 }
 </script>
 
 <style lang="scss" scoped>
 @import '../assets/style/general.scss';
 
+    .section-popular-courses {
+        background-image: url(../../../public/images/page-background-img.png);
+        background-size: contain;
+    }
     .section-learning {
         border-bottom: 1px solid gray;
     }
