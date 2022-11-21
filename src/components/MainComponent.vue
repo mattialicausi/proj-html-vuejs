@@ -1,13 +1,19 @@
 <template>
-   <section class="section-category d-flex">
+
+   <section class="section-category d-flex myWrapper">
         <div class="col-2" v-for="(item, index) in categoryOptions" :key="item.index">
             <CardCategory :item="item"/>
         </div>
    </section>
+
+   <section class="section-home-tutoring">
+        <HomeTutoring/>
+   </section>
 </template>
 
 <script>
-import CardCategory from './header_section/CardCategory.vue';
+import CardCategory from './main_section/CardCategory.vue';
+import HomeTutoring from './main_section/HomeTutoring.vue';
 
     export default {
     name: "MainComponent",
@@ -41,7 +47,10 @@ import CardCategory from './header_section/CardCategory.vue';
             ]
         };
     },
-    components: { CardCategory }
+    components: { 
+        CardCategory,
+         HomeTutoring
+    }
 }
 </script>
 
