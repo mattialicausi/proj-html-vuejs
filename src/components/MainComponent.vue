@@ -25,6 +25,11 @@
    <section class="section-popular-courses">
         <PopularCourses/>
    </section>
+
+   <section class="section-plan">
+        <PlanComponent/>
+   </section>
+
 </template>
 
 <script>
@@ -34,6 +39,7 @@ import HomeTutoring from './main_section/HomeTutoring.vue';
 import TestimonialsComponent from './main_section/TestimonialsComponent.vue';
 import LearningComponent from './main_section/LearningComponent.vue';
 import PopularCourses from './main_section/PopularCourses.vue';
+import PlanComponent from './main_section/PlanComponent.vue';
 
     export default {
     name: "MainComponent",
@@ -73,15 +79,16 @@ import PopularCourses from './main_section/PopularCourses.vue';
     EmpoweringComponent,
     TestimonialsComponent,
     LearningComponent,
-    PopularCourses
-    },
+    PopularCourses,
+    PlanComponent
+},
 }
 </script>
 
 <style lang="scss" scoped>
 @import '../assets/style/general.scss';
 
-    .section-popular-courses {
+    .section-popular-courses, .section-plan{
         background-image: url(../../../public/images/page-background-img.png);
         background-size: contain;
     }

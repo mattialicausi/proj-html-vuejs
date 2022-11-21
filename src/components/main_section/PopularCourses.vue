@@ -63,6 +63,7 @@ import CardCourses from '../main_section/CardCourses.vue';
 
     .container-popular-courses {
         padding-bottom: 100px;
+        position: relative;
     }
     .header-section {
         text-align: center;
