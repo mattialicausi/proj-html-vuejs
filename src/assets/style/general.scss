@@ -7,3 +7,24 @@ $fa-font-path: '../webfonts';
 @import '@fortawesome/fontawesome-free/scss/solid.scss';
 @import '@fortawesome/fontawesome-free/scss/regular.scss';
 @import '../../../node_modules/bootstrap/scss/bootstrap.scss';
+
+//DIVISIONE MACROCOMPONENTI
+
+header {
+    height: 100vh;
+    width: 100%;
+    color: $text-white;
+}
+
+.nav-bar {
+    height: 10vh;
+}
+
+.jumbo {
+    height: calc(100vh - 10vh);
+}
+
+.myWrapper{
+    max-width: 90%;
+    margin: 0 auto;
+}
