@@ -3,7 +3,7 @@
 
         <div class="myWrapper text-center">
             <div class="container-img">
-                <img src="../../../public/images/testimonials-standard-1.png" alt="image testimonial">
+                <img src="../../../public/images/testimonials-standard-2.png" alt="image testimonial">
             </div>
             <p>"Lorem ipsum dolor, sit amet consectetur adipisicing elit. Maiores iure voluptatem aliquam maxime expedita natus labore perspiciatis harum placeat. Praesentium, a quidem voluptates provident beatae facilis possimus deleniti modi alias! Lorem ipsum dolor sit amet consectetur adipisicing elit repellat"</p>
             <h4>Joan Collins</h4>

@@ -15,7 +15,11 @@
    </section>
 
    <section class="section-testimonials">
-    <TestimonialsComponent/>
+        <TestimonialsComponent/>
+   </section>
+       
+   <section class="section-learning">
+        <LearningComponent />
    </section>
 </template>
 
@@ -24,6 +28,7 @@ import CardCategory from './main_section/CardCategory.vue';
 import EmpoweringComponent from './main_section/EmpoweringComponent.vue';
 import HomeTutoring from './main_section/HomeTutoring.vue';
 import TestimonialsComponent from './main_section/TestimonialsComponent.vue';
+import LearningComponent from './main_section/LearningComponent.vue';
 
     export default {
     name: "MainComponent",
@@ -61,12 +66,17 @@ import TestimonialsComponent from './main_section/TestimonialsComponent.vue';
     CardCategory,
     HomeTutoring,
     EmpoweringComponent,
-    TestimonialsComponent
+    TestimonialsComponent,
+    LearningComponent
 }
 }
 </script>
 
 <style lang="scss" scoped>
 @import '../assets/style/general.scss';
+
+    .section-learning {
+        border-bottom: 1px solid gray;
+    }
 
 </style>
