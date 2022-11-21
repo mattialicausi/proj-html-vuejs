@@ -9,10 +9,19 @@
    <section class="section-home-tutoring">
         <HomeTutoring/>
    </section>
+
+   <section class="section-empowering myWrapper">
+        <EmpoweringComponent/>
+   </section>
+
+   <section class="section-testimonials">
+   
+   </section>
 </template>
 
 <script>
 import CardCategory from './main_section/CardCategory.vue';
+import EmpoweringComponent from './main_section/EmpoweringComponent.vue';
 import HomeTutoring from './main_section/HomeTutoring.vue';
 
     export default {
@@ -47,10 +56,11 @@ import HomeTutoring from './main_section/HomeTutoring.vue';
             ]
         };
     },
-    components: { 
-        CardCategory,
-         HomeTutoring
-    }
+    components: {
+    CardCategory,
+    HomeTutoring,
+    EmpoweringComponent
+}
 }
 </script>
 
