@@ -26,7 +26,7 @@ import TableApp from './TableApp.vue';
 @import '../../assets/style/general.scss';
 
     .container-plan-component {
-        margin-top: 50px;
+        margin: 100px 0;
     }
 
 </style>

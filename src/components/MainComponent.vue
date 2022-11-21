@@ -30,6 +30,10 @@
         <PlanComponent/>
    </section>
 
+   <section class="section-sponsor">
+        <SponsorComponent/>
+   </section>
+
 </template>
 
 <script>
@@ -40,6 +44,7 @@ import TestimonialsComponent from './main_section/TestimonialsComponent.vue';
 import LearningComponent from './main_section/LearningComponent.vue';
 import PopularCourses from './main_section/PopularCourses.vue';
 import PlanComponent from './main_section/PlanComponent.vue';
+import SponsorComponent from './main_section/SponsorComponent.vue';
 
     export default {
     name: "MainComponent",
@@ -80,7 +85,8 @@ import PlanComponent from './main_section/PlanComponent.vue';
     TestimonialsComponent,
     LearningComponent,
     PopularCourses,
-    PlanComponent
+    PlanComponent,
+    SponsorComponent
 },
 }
 </script>
@@ -93,6 +99,10 @@ import PlanComponent from './main_section/PlanComponent.vue';
         background-size: contain;
     }
     .section-learning {
+        border-bottom: 1px solid gray;
+    }
+
+    .section-plan {
         border-bottom: 1px solid gray;
     }
 
