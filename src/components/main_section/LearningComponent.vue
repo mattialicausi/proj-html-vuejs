@@ -1,13 +1,13 @@
 <template>
     <div class="container-section-learning myWrapper d-flex">
         <div class="left-learning">
-            <div class="container-title" v-for="(item, index) in leftOptions" :key="index" :class="item.show === true ? 'select' : '' " @click.prevent="changeWindow">
+            <div class="container-title" v-for="(item, index) in leftOptions" :key="index" @click="changeWindow(index)">
                 <div class="title">{{item}}</div>
             </div>
         </div>
 
-        <div class="right-learning position-relative" v-for="(item, index) in rightOptions" :key="index">
-            <LearningPossibilities :item="item"/>
+        <div class="right-learning position-relative " v-for="(item, index) in rightOptions" :key="index">
+            <LearningPossibilities :item="item" :i="index" :rightOptions="rightOptions"  :class="index === activeIndex ? '' : 'd-none'"/>
         </div>
     </div>
 </template>
@@ -47,7 +47,7 @@ import LearningPossibilities from '../main_section/LaerningPossibilities.vue';
                         id: '1'
                     },
                     {
-                        title: 'Learning Possibilities',
+                        title: 'Degree Programme',
                         description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam odit doloremque rerum sint omnis repudiandae, quis hic minus alias assumenda lorem ipsum dolor sit amet consectetur adipisicing elit. Sint, amet!.',
                         check1: 'We enrich lives through learning.',
                         check2: 'Maximizing potential through individual attention.',
@@ -59,7 +59,7 @@ import LearningPossibilities from '../main_section/LaerningPossibilities.vue';
 
                     },
                     {
-                        title: 'Learning Possibilities',
+                        title: 'Chareer Archievements',
                         description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam odit doloremque rerum sint omnis repudiandae, quis hic minus alias assumenda lorem ipsum dolor sit amet consectetur adipisicing elit. Sint, amet!.',
                         check1: 'We enrich lives through learning.',
                         check2: 'Maximizing potential through individual attention.',
@@ -71,7 +71,7 @@ import LearningPossibilities from '../main_section/LaerningPossibilities.vue';
 
                     },
                     {
-                        title: 'Learning Possibilities',
+                        title: 'Personal Managment',
                         description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam odit doloremque rerum sint omnis repudiandae, quis hic minus alias assumenda lorem ipsum dolor sit amet consectetur adipisicing elit. Sint, amet!.',
                         check1: 'We enrich lives through learning.',
                         check2: 'Maximizing potential through individual attention.',
@@ -83,7 +83,7 @@ import LearningPossibilities from '../main_section/LaerningPossibilities.vue';
 
                     },
                     {
-                        title: 'Learning Possibilities',
+                        title: 'Steps To Success',
                         description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam odit doloremque rerum sint omnis repudiandae, quis hic minus alias assumenda lorem ipsum dolor sit amet consectetur adipisicing elit. Sint, amet!.',
                         check1: 'We enrich lives through learning.',
                         check2: 'Maximizing potential through individual attention.',
@@ -95,7 +95,7 @@ import LearningPossibilities from '../main_section/LaerningPossibilities.vue';
 
                     },
                     {
-                        title: 'Learning Possibilities',
+                        title: 'Knowledge Transfer',
                         description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam odit doloremque rerum sint omnis repudiandae, quis hic minus alias assumenda lorem ipsum dolor sit amet consectetur adipisicing elit. Sint, amet!.',
                         check1: 'We enrich lives through learning.',
                         check2: 'Maximizing potential through individual attention.',
@@ -110,10 +110,10 @@ import LearningPossibilities from '../main_section/LaerningPossibilities.vue';
             }
         },
         methods: {
-            changeWindow() {
-                    // this.activeIndex = this.item.index
-                    this.rightOptions[this.activeIndex].show = !this.rightOptions[this.activeIndex].show
-                    console.log('click')
+            changeWindow(i) {
+                    this.activeIndex = i;
+                    //console.log(this.activeIndex)
+                    //console.log('click')
             }
         }
     }
@@ -129,12 +129,6 @@ import LearningPossibilities from '../main_section/LaerningPossibilities.vue';
     .left-learning {
         width: 20%;
         margin-top: 30px;
-    }
-
-    .right-learning {
-        width: calc(100% - 20%);
-        margin-top: 30px;
-        max-width: 70%;
     }
 
     .container-title{
