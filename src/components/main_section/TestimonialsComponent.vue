@@ -6,10 +6,9 @@
 
         <div class="container-indici d-flex align-items-center">
             <div  v-for="(item, index) in indiciLista" :key="index">
-            <div class="indice mx-2" @click="getActive(index)">
-                <div :class="index === activeIndex ? 'selezionato': ''">{{indiciLista.index}}</div>
-            </div>
-               
+                <div class="indice mx-2" @click="getActive(index)">
+                    <div :class="index === activeIndex ? 'selezionato': ''">{{indiciLista.index}}</div>
+                </div>
             </div>
         </div>
 
@@ -118,6 +117,10 @@ import TestimonialCard from './TestimonialCard.vue';
             height: 10px;
             border-radius: 50%;
             background-color: white;
+        }
+
+        .indice:hover {
+            cursor: pointer;
         }
     }
 

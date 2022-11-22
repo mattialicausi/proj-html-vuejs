@@ -1,4 +1,5 @@
 <template>
+
     <div class="card-courses rounded-2">
         <div class="container-img">
             <img :src="item.image" :alt="item.title">
@@ -24,15 +25,12 @@
                     <span class="px-2">{{item.type}}</span>
                 </div>
             </div>
-
-        </div>
-    
-        <div class="container-indici d-flex">
-            <div class="indici d-flex align-items-center justify-content-center"><div></div></div>
-            <div class="indici d-flex align-items-center justify-content-center mx-2"><div class="selezionato"></div></div>
-            <div class="indici d-flex align-items-center justify-content-center"><div></div></div>
         </div>
     </div>
+
+
+
+
 </template>
 
 <script>
@@ -40,7 +38,9 @@
         name: 'CardCourses',
 
         props: {
-            item: Object
+            item: Object,
+            i: Number,
+            popularOptions: Object
         }
     }
 </script>
@@ -77,28 +77,5 @@
         color: gray;
     }
 
-    .container-indici {
-        position: absolute;
-        bottom: 20px;
-        left: 47%;
-
-        .indici {
-            height: 20px;
-            width: 20px;
-            background-color:  rgba(101, 195, 249, 0.2);
-            border-radius: 50%;
-            border: 1px solid  rgb(101, 195, 249);
-        }
-
-        .indici:hover {
-            cursor: pointer;
-        }
-
-        .selezionato {
-            height: 10px;
-            width: 10px;
-            background-color: rgb(101, 195, 249);
-            border-radius: 50%;
-        }
-    }
+ 
 </style>

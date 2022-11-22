@@ -28,6 +28,7 @@ import CardCourses from '../main_section/CardCourses.vue';
         data() {
             return {
                 popularOptions: [
+                    
                     {
                         image: '../../../public/images/course-5-f-img.jpg',
                         title: 'Android Developer',
