@@ -94,6 +94,12 @@ import SponsorComponent from './main_section/SponsorComponent.vue';
 <style lang="scss" scoped>
 @import '../assets/style/general.scss';
 
+    .section-category {
+        margin-left : 60px;
+        margin-right : -20px;
+        justify-content: space-between;
+    }
+
     .section-popular-courses, .section-plan{
         background-image: url(../../../public/images/page-background-img.png);
         background-size: contain;
