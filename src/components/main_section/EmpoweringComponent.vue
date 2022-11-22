@@ -1,15 +1,15 @@
 <template>
-    <div class="container-empowering d-flex">
+    <div class="container-empowering row">
         
-        <div class="container-image">
+        <div class="container-image col-6">
             <img src="../../../public/images/h5-img-2.jpg" alt="image of empowering children">
         </div>
 
-        <div class="container-content">
-            <h3>Empowering Children to reach Their Potential.</h3>
+        <div class="container-content h-100 col-6">
+            <h2>Empowering Children to reach Their Potential.</h2>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum velit quae quaerat reprehenderit iste soluta vitae sit qui fugiat at.</p>
-            <div class="d-flex">
-                <div class="container-info">
+            <div class="d-flex justify-content-center align-items-center w-100">
+                <div class="container-info mx-2">
                     <div class="number-info">168</div>
                     <div>User Stories</div>
                 </div>
@@ -32,13 +32,16 @@
 <style lang="scss" scoped>
 @import '../../assets/style/general.scss';
 
-    .container-empowering, .container-content{
-        margin: 30px auto;
-        width: calc(100% / 2);
+    .container-empowering{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: auto;
+        margin-top: 50px;
+        margin-bottom: 50px;
     }
 
     .container-info {
-        width: calc(100% / 2);
         text-align: center;
         color: rgb(101, 195, 249);
         .number-info {
@@ -46,8 +49,9 @@
         }
     }
     .container-image{
-        width: 500px;
-
+        width: 40%;
+        margin-top: 50px;
+        ;
         img {
             width: 100%;
         }

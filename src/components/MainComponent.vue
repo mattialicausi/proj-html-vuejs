@@ -1,36 +1,36 @@
 <template>
 
-   <section class="section-category d-flex myWrapper">
+   <section class="section-category mt-50 row myWrapper justify-content-between">
         <div class="col-2" v-for="(item, index) in categoryOptions" :key="item.index">
             <CardCategory :item="item"/>
         </div>
    </section>
 
-   <section class="section-home-tutoring">
+   <section class="section-home-tutoring mt-50">
         <HomeTutoring/>
    </section>
 
-   <section class="section-empowering myWrapper">
+   <section class="section-empowering mt-50 myWrapper">
         <EmpoweringComponent/>
    </section>
 
-   <section class="section-testimonials">
+   <section class="section-testimonials mt-50">
         <TestimonialsComponent/>
    </section>
        
-   <section class="section-learning">
+   <section class="section-learning mt-50">
         <LearningComponent />
    </section>
 
-   <section class="section-popular-courses">
+   <section class="section-popular-courses mt-50">
         <PopularCourses/>
    </section>
 
-   <section class="section-plan">
+   <section class="section-plan mt-50">
         <PlanComponent/>
    </section>
 
-   <section class="section-sponsor">
+   <section class="section-sponsor mt-50">
         <SponsorComponent/>
    </section>
 
@@ -95,9 +95,9 @@ import SponsorComponent from './main_section/SponsorComponent.vue';
 @import '../assets/style/general.scss';
 
     .section-category {
-        margin-left : 60px;
-        margin-right : -20px;
-        justify-content: space-between;
+        // margin-left : 60px;
+        // margin-right : -20px;
+        // justify-content: space-between;
     }
 
     .section-popular-courses, .section-plan{
@@ -110,6 +110,10 @@ import SponsorComponent from './main_section/SponsorComponent.vue';
 
     .section-plan {
         border-bottom: 1px solid gray;
+    }
+
+    .mt-50 {
+        margin-top: 50px;
     }
 
 </style>

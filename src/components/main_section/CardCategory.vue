@@ -20,7 +20,7 @@
     .container-card-category {
         height: 200px;
         width: auto;
-        margin: 20px 40px;
+        // margin: 20px 40px;
         display: flex;
         flex-flow: column nowrap;
         justify-content: center;

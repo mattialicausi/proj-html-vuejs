@@ -50,19 +50,19 @@
         </div>
 
 
-        <div class="container-copyright py-5 myWrapper row d-flex justify-content-between align items-center">
-            <div class="col-4">
+        <div class="container-copyright py-5 myWrapper row d-flex justify-content-between align items-center row">
+            <div class="col-4 d-flex align-items-center">
                 <span> 2022 @Mattia by Boolean</span>
             </div>
 
-            <div class="col-4"></div>
+            
 
-            <div class="col-4 d-flex justify-content-between align items-center">
-                <div>
+            <div class="col-4 col-sm-8 d-flex justify-content-between align items-center">
+                <div class=" d-flex align-items-center">
                     CALL +44224455
                 </div>
 
-                <div class="text-uppercase">
+                <div class="text-uppercase d-flex align-items-center col-4">
                     follow us
                 </div>
 
@@ -70,7 +70,7 @@
                     <i class="fa-brands fa-twitter"></i>
                 </div>
 
-                <div>
+                <div class="mx-2">
                     <i class="fa-brands fa-instagram"></i>
                 </div>
 
@@ -145,7 +145,7 @@
 
     img {
         //margin-top: 50px;
-        width: 400px;
+        width: 100%;
     }
 
     .container-logo {
@@ -163,6 +163,7 @@
 
         .icon {
             color: white;
+            font-size: 2rem;
         }
     }
 

@@ -32,12 +32,13 @@
 @import '../../assets/style/general.scss';
 
     .container-cards-learning{
-        width: 800px;
+        width: 400px;
         margin-left: 100px;
         word-wrap: break-word;
+        margin-top: 30px;
         position: absolute;
-        left: 20px;
-        top: 50px;
+        left: 5%;
+        top: 0;
     }
     .container-checks{
         div {

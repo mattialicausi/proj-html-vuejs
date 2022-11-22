@@ -11,11 +11,14 @@
     </div>
     </header>
 
-    <div class="container-indici d-flex align-items-center justify-content-center ">
-        <div class="indici"></div>
-        <div class="indici"></div>
-        <div class="indici"> <div class="selezionato"></div></div>
-    </div>
+    <div class="container-indici d-flex align-items-center">
+            <div  v-for="(item, index) in indiciLista" :key="index">
+                <div class="indice mx-2" @click="getActive(index)">
+                    <div :class="index === activeIndex ? 'selezionato': ''">{{indiciLista.index}}</div>
+                </div>
+            </div>
+        </div>
+
 </template>
 
 <script>
@@ -25,9 +28,35 @@ import NavBarApp from './header_section/NavBarApp.vue';
     export default {
     name: "HeaderComponent",
     components: {
-    NavBarApp,
-    JumboComponent
-},
+        NavBarApp,
+        JumboComponent
+    },
+    data() {
+        return {
+            indiciLista: [
+                {
+                    selezionato: true
+                },
+                {
+                    selezionato: false
+                },
+                {
+                    selezionato: false
+                },
+            ],
+
+            activeIndex: 1,
+
+        }
+    },
+
+    methods: {
+        getActive(i) {
+            this.activeIndex = i;
+            console.log('click');
+            console.log(this.activeIndex);
+        }
+    }
 
 }
 </script>
@@ -45,10 +74,14 @@ import NavBarApp from './header_section/NavBarApp.vue';
 
     .container-indici {
         position: absolute;
-        bottom: 10px;
-        left: 47%;
+        bottom: 20px;
+        left: 40%;
+        right: 40%;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
     }
-    .indici {
+    .indice {
         background-color: gray;
         width: 20px;
         height: 20px;
@@ -60,7 +93,7 @@ import NavBarApp from './header_section/NavBarApp.vue';
         border: 1px solid white
     }
 
-    .indici:hover {
+    .indice:hover {
         cursor: pointer;
     }
 

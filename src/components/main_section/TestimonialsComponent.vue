@@ -92,13 +92,21 @@ import TestimonialCard from './TestimonialCard.vue';
     .container-indici {
         position: absolute;
         bottom: 20px;
-        left: 47%;
+        right: 40%;
+        left: 40%;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
     }
 
     .content {
         position: absolute;
         top: 100px;
         left:100px;
+        right: 100px;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
     }
 
     .indice {

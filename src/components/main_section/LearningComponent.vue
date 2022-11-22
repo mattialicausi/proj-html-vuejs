@@ -1,7 +1,7 @@
 <template>
     <div class="container-section-learning myWrapper d-flex">
         <div class="left-learning">
-            <div class="container-title" v-for="(item, index) in leftOptions" :key="index" @click="changeWindow(index)">
+            <div class="container-title" v-for="(item, index) in leftOptions" :key="index" :class="index === activeIndex ? 'select' : ''" @click="changeWindow(index)">
                 <div class="title">{{item}}</div>
             </div>
         </div>

@@ -25,17 +25,8 @@
 @import '../../assets/style/general.scss';
 
 
-    .container-img {
-            width: 200px;
-            margin: 0 auto;
-
-            img {
-                width: 100%;
-            }
-        }
-
     p {
-            padding: 10px 0;
-        }
+        padding: 10px 0;
+    }
 
 </style>

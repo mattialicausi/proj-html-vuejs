@@ -1,35 +1,34 @@
 <template>
 
-    <div class="card-courses rounded-2">
-        <div class="container-img">
-            <img :src="item.image" :alt="item.title">
-        </div>
-        <div class="header-card">
-            <div class="d-flex align-items-center justify-content-between mt-2">
-                <h4>{{item.title}}</h4>
-                <div class="text-uppercase button rounded-3">{{item.status}}</div>
+    <div v-for="(item, l) in items" :key="l">
+        <div class="card-courses rounded-2"  :activeIndex="activeIndex" :class="i === activeIndex ? 'd-none' : ''">
+            <div class="container-img">
+                <img :src="item[i].image">
             </div>
-            
-            <div class="subtitle cgray">{{item.subtitle}}</div>
-
-            <p class="cgray">{{item.description}}</p>
-
-            <div class="d-flex align-items-center cgray">
-                <div class="d-flex align-items-center">
-                    <i class="fa-solid fa-user"></i>
-                    <span class="px-2">1</span>
+            <div class="header-card">
+                <div class="d-flex align-items-center justify-content-between mt-2">
+                    <h4>{{item[i].title}}</h4>
+                    <div class="text-uppercase button rounded-3">{{item[i].status}}</div>
                 </div>
+                
+                <div class="subtitle cgray">{{item[i].subtitle}}</div>
 
-                <div class="d-flex align-items-center px-4">
-                    <i class="fa-solid fa-tag"></i>
-                    <span class="px-2">{{item.type}}</span>
+                <p class="cgray">{{item[i].description}}</p>
+
+                <div class="d-flex align-items-center cgray">
+                    <div class="d-flex align-items-center">
+                        <i class="fa-solid fa-user"></i>
+                        <span class="px-2">1</span>
+                    </div>
+
+                    <div class="d-flex align-items-center px-4">
+                        <i class="fa-solid fa-tag"></i>
+                        <span class="px-2">{{item[i].type}}</span>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
-
-
-
 
 </template>
 
@@ -38,10 +37,24 @@
         name: 'CardCourses',
 
         props: {
-            item: Object,
+            items: Object,
             i: Number,
+            popularOptions: Object,
+            activeIndex: Number,
+            index: Number,
             popularOptions: Object
-        }
+        },
+
+        // methods: {
+        //     getI (){
+        //         console.log(this.i)
+        //     }
+        // },
+        // mounted() {
+        //     this.getI()
+             
+        // }
+ 
     }
 </script>
 
@@ -50,6 +63,7 @@
 
     .header-card {
         flex-flow: column nowrap;
+        height: 100%;
     }
     .subtitle{
         color: gray;
@@ -61,7 +75,7 @@
 
     .container-img {
         width: 100%;
-        height: 300px;
+        height: auto;
 
         img {
             width: 100%;
@@ -76,6 +90,9 @@
     .cgray {
         color: gray;
     }
-
+.titolo {
+    font-size: 30px;
+    color: black;
+}
  
 </style>

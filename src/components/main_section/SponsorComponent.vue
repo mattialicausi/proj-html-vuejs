@@ -1,7 +1,7 @@
 <template>
     <div class="container-sponsor myWrapper">
         <div class="row sponsor">
-            <div class="col-3" v-for="(item, index) in sponsorOptions" :key="index">
+            <div class="col-3 sol-sm-3" v-for="(item, index) in sponsorOptions" :key="index">
                 <img :src="item" alt="logo sponsor">
             </div>
 
@@ -31,6 +31,10 @@
 
     .sponsor {
         margin: 100px 0;
+    }
+
+    img {
+        width: 70%;
     }
 
     .sponsor div:hover {
