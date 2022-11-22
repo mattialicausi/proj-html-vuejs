@@ -1,26 +1,82 @@
 <template>
-    <div class="container-section-testimonials h-100">
+    <div class="container-section-testimonials h-100 position-relative">
+        <div class="myWrapper content" v-for="(item, index) in cardTestimonial" :key="index">
+            <TestimonialCard :cardTestimonial="cardTestimonial" :i="index" :class="index === activeIndex ? '' : 'd-none'"/>
+        </div>
 
-        <div class="myWrapper text-center">
-            <div class="container-img">
-                <img src="../../../public/images/testimonials-standard-2.png" alt="image testimonial">
+        <div class="container-indici d-flex align-items-center">
+            <div  v-for="(item, index) in indiciLista" :key="index">
+            <div class="indice mx-2" @click="getActive(index)">
+                <div :class="index === activeIndex ? 'selezionato': ''">{{indiciLista.index}}</div>
             </div>
-            <p>"Lorem ipsum dolor, sit amet consectetur adipisicing elit. Maiores iure voluptatem aliquam maxime expedita natus labore perspiciatis harum placeat. Praesentium, a quidem voluptates provident beatae facilis possimus deleniti modi alias! Lorem ipsum dolor sit amet consectetur adipisicing elit repellat"</p>
-            <h4>Joan Collins</h4>
-            <div class="text-uppercase">student</div>
+               
+            </div>
         </div>
 
     </div>
 </template>
 
 <script>
+import TestimonialCard from './TestimonialCard.vue';
+
     export default {
-        name: 'TestimonialsComponent'
-    }
+    name: "TestimonialsComponent",
+    components: { TestimonialCard },
+
+    data () {
+        return {
+            cardTestimonial: [
+                {
+                    image: '../../../public/images/testimonials-standard-1.png',
+                    description: '"Lorem ipsum dolor, sit amet consectetur adipisicing elit. Maiores iure voluptatem aliquam maxime expedita natus labore perspiciatis harum placeat. Praesentium, a quidem voluptates provident beatae facilis possimus deleniti modi alias! Lorem ipsum dolor sit amet consectetur adipisicing elit repellat"',
+                    name: 'Anne Diaw',
+                    role: 'teacher'
+                },
+                {
+                    image: '../../../public/images/testimonials-standard-2.png',
+                    description: '"Lorem ipsum dolor, sit amet consectetur adipisicing elit. Maiores iure voluptatemus labore perspiciatis harum placeat. Praesentium, a quidem voluptates provident beatae facilis possimus deleniti modi alias! Lorem ipsum dolor sit amet consectetur adipisicing elit repellat"',
+                    name: 'joan Collins',
+                    role: 'student'
+                },
+                {
+                    image: '../../../public/images/testimonials-standard-3.png',
+                    description: '"Lorem ipsum dolor, sit amet consectetur adipisicing elit. Maiores iure voluptatem aliquam maxime expedita natus labore iatis harum placeat. Praesentium, a quidem voluptates provident beatae facilis possimus deleniti modi alias! Lorem ipsum dolor sit amet consectetur adipisicing elit repellat"',
+                    name: 'Joseph Stuarth',
+                    role: 'developer'
+                },
+            ],
+
+            indiciLista: [
+                {
+                    selezionato: true
+                },
+                {
+                    selezionato: false
+                },
+                {
+                    selezionato: false
+                },
+            ],
+
+            activeIndex: 1,
+
+        }
+    },
+        methods: {
+            getActive(i) {
+                this.activeIndex = i;
+                console.log('click');
+                console.log(this.activeIndex);
+            }
+        }
+        
+    
+}
 </script>
 
 <style lang="scss" scoped>
 @import '../../assets/style/general.scss';
+
 
     .container-section-testimonials {
         background-image: url(../../../public/images/h5-parallax-img-1.png);
@@ -31,19 +87,39 @@
         justify-content: center;
         color: white;
         line-height: 2rem;
+        position: relative;
+    }
 
-        p {
-            padding: 10px 0;
+    .container-indici {
+        position: absolute;
+        bottom: 20px;
+        left: 47%;
+    }
+
+    .content {
+        position: absolute;
+        top: 100px;
+        left:100px;
+    }
+
+    .indice {
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
+        background-color: gray;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border: 1px solid white;
+
+
+        .selezionato {
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background-color: white;
         }
     }
 
-    .container-img {
-        width: 200px;
-        margin: 0 auto;
-
-        img {
-            width: 100%;
-        }
-    }
 
 </style>
