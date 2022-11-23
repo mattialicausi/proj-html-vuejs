@@ -12,5 +12,16 @@ export const store = reactive ({
     growItem() {
         this.shop ++;
         this.scrollToUp();
-    }
+    },
+
+    // MOSTRARE REGISTER APP
+
+    showRegister: false,
+
+    // enterFade2: false,
+
+    showRegisterFn() {
+        this.showRegister = !this.showRegister;
+        // this.enterFade2 = true;
+    },
 });

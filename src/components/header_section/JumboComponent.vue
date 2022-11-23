@@ -6,7 +6,7 @@
                     <div v-if="enterFade">
                         <h1 class="title-jumbo">Contemporary Ideas</h1>
                         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Excepturi deserunt harum est tenetur corporis, dolorum quas pariatur voluptate non consequuntur autem nesciunt commodi ullam in error mollitia?</p>
-                        <button class="myBTN text-uppercase">Register now</button>
+                        <button class="myBTN text-uppercase" @click="store.showRegisterFn">Register now</button>
                     </div>
                 </Transition>
         </div>
@@ -16,12 +16,15 @@
 </template>
 
 <script>
+import {store} from '../../store';
     export default {
+
         name: 'JumboComponent',
 
         data () {
             return {
                 enterFade: false,
+                store,
             }
         },
 
