@@ -12,6 +12,10 @@
     <RegisterApp/>
   </div>
 
+  <div v-if="store.showLoader">
+    <LoaderComponent/>
+  </div>
+
 
 
 </template>
@@ -22,14 +26,16 @@ import FooterComponent from './components/FooterComponent.vue';
 import HeaderComponent from './components/HeaderComponent.vue';
 import MainComponent from './components/MainComponent.vue';
 import RegisterApp from './components/RegisterApp.vue';
+import LoaderComponent from './components/LoaderComponent.vue';
 
   export default {
     components: {
     HeaderComponent,
     MainComponent,
     FooterComponent,
-    RegisterApp
-  },
+    RegisterApp,
+    LoaderComponent
+},
 
   data () {
     return {

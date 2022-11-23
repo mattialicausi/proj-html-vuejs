@@ -18,7 +18,7 @@ export const store = reactive ({
 
     showRegister: false,
 
-    // enterFade2: false,
+
 
     showRegisterFn() {
         this.showRegister = !this.showRegister;
