@@ -1,5 +1,5 @@
 <template>
-    <header>
+    <header :class=" this.index = this.activeIndex ? 'bg-' + this.activeIndex  : ''">
     <div class="wrapper">
         <section class="nav-bar ">
             <NavBarApp/>
@@ -13,7 +13,7 @@
 
     <div class="container-indici d-flex align-items-center">
             <div  v-for="(item, index) in indiciLista" :key="index">
-                <div class="indice mx-2" @click="getActive(index)">
+                <div class="indice mx-2" @click.prevent="getActive(index)">
                     <div :class="index === activeIndex ? 'selezionato': ''">{{indiciLista.index}}</div>
                 </div>
             </div>
@@ -45,6 +45,19 @@ import NavBarApp from './header_section/NavBarApp.vue';
                 },
             ],
 
+            bgImg: [ 
+                {
+                    0: 'bg-0',
+                },
+                {
+                    1: 'bg-1',
+                },
+                {
+                    2: 'bg-2'
+                }
+                   
+            ],
+
             activeIndex: 1,
 
         }
@@ -55,6 +68,7 @@ import NavBarApp from './header_section/NavBarApp.vue';
             this.activeIndex = i;
             console.log('click');
             console.log(this.activeIndex);
+            console.log(i)
         }
     }
 
@@ -64,9 +78,21 @@ import NavBarApp from './header_section/NavBarApp.vue';
 <style lang="scss" scoped>
 @import '../assets/style/general.scss';
     header {
-        background-image: url(../../public/images/course-9-f-img.jpg);
+        //background-image: url(../../public/images/course-9-f-img.jpg);
         background-size: cover;
 
+    }
+
+    .bg-0{
+        background-image: url(../../public/images/h1-slide-1-background.jpg);
+    }
+
+    .bg-1{
+        background-image: url(../../public/images/course-9-f-img.jpg);
+    }
+
+    .bg-2{
+        background-image: url(../../public/images/h5-slide-1-background.jpg);
     }
     .wrapper {
         background-color: rgba(0,0,0,0.3);
