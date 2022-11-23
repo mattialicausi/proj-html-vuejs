@@ -50,6 +50,10 @@ import {store} from '../../store';
         padding: 10px;
         color: white;
         border: none;
+
+        &:hover {
+            cursor: pointer;
+        }
     }
 
     .title-jumbo {
@@ -67,17 +71,17 @@ import {store} from '../../store';
     }
 
     .slide-fade-enter-active {
-  transition: all 1s ease-out;
-}
+        transition: all 1s ease-out;
+    }
 
-.slide-fade-leave-active {
-  transition: all 0.8s cubic-bezier(1, 0.5, 0.8, 1);
-}
+    .slide-fade-leave-active {
+        transition: all 0.8s cubic-bezier(1, 0.5, 0.8, 1);
+    }
 
-.slide-fade-enter-from,
-.slide-fade-leave-to {
-  transform: translateX(20px);
-  opacity: 0;
-}
+    .slide-fade-enter-from,
+    .slide-fade-leave-to {
+        transform: translateX(20px);
+        opacity: 0;
+    }
 
 </style>
