@@ -134,5 +134,13 @@ import NavBarApp from './header_section/NavBarApp.vue';
         background-color: white;
     }
 
+    .nav-bar {
+        position: sticky;
+        top: 0;
+        left: 0;
+        right: 0;
+        width: 100%;
+    }
+
 
 </style>

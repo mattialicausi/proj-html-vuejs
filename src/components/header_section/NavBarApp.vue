@@ -42,9 +42,7 @@
 <style lang="scss" scoped>
 @import '../../assets/style/general.scss';
 
-    // .container-navbar {
-    //     width: 100%;
-    // }
+
     .container-logo-navbar{
         // width: 100%;
         display: flex;
