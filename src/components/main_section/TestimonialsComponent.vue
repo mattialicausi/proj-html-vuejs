@@ -120,7 +120,7 @@ import TestimonialCard from './TestimonialCard.vue';
 
     .content {
         position: absolute;
-        top: 150px;
+        top: 50px;
         left:100px;
         right: 100px;
         display: flex;
@@ -148,6 +148,12 @@ import TestimonialCard from './TestimonialCard.vue';
 
         .indice:hover {
             cursor: pointer;
+        }
+    }
+
+    @media (min-width: 768px) {
+        .content {
+            top: 150px;
         }
     }
 
