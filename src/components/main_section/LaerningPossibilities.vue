@@ -66,4 +66,11 @@
             width: 100%;
         }
     }
+
+    @media (min-width: 768px) {
+        .container-cards-learning{
+            width: 700px;
+      
+        }
+    }
 </style>

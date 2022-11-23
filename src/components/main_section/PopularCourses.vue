@@ -172,8 +172,8 @@ import CardCourses from '../main_section/CardCourses.vue';
     .container-indici {
         position: absolute;
         bottom: 20px;
-        left: 40%;
-        right: 40%;
+        left: 44%;
+        right: 44%;
         display: flex;
         justify-content: space-around;
         align-items: center;
