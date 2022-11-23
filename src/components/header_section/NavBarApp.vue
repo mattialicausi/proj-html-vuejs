@@ -13,7 +13,9 @@
         
         <div class="container-icon-navbar d-flex justify-content-center align-items-center  col-3">
             <i class="fa-solid fa-magnifying-glass"></i>
-            <i class="fa-solid fa-bag-shopping"></i>
+            <i class="fa-solid fa-bag-shopping position-relative">
+                <div class="content-shop">{{store.shop}}</div>
+            </i>
             <i class="fa-solid fa-bars"></i>
         </div>
     </div>
@@ -21,10 +23,13 @@
 </template>
 
 <script>
+import {store} from '../../store';
     export default {
         name: 'NavBarApp',
         data() {
             return {
+                store, 
+
                 navOptions: [
                     'home',
                     'courses',
@@ -76,7 +81,29 @@
         i{
             font-size: 1.5rem;
             margin: 0 15px;
+
+            &:hover {
+                color: rgb(101, 195, 249);
+                cursor: pointer;
+                transition: color 500ms linear;
+            }
         }
+
+    }
+
+    .content-shop {
+        position: absolute;
+        top: -10px;
+        right: -10px;
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
+        background-color: rgb(101, 195, 249);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 10px;
+        padding: 5px;
     }
 
 </style>

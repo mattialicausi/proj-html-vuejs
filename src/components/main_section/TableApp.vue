@@ -23,20 +23,25 @@
 
         <div class="row table">
             <div class="col-3"><div class="button"></div></div>
-            <div class="col-3  d-flex align-items-center justify-content-center  container-btn"><div class="button text-uppercase">get it now</div></div>
-            <div class="col-3  d-flex align-items-center justify-content-center  container-btn"><div class="button text-uppercase">get it now</div></div>
-            <div class="col-3  d-flex align-items-center justify-content-center  container-btn"><div class="button text-uppercase">get it now</div></div>
+            <div class="col-3  d-flex align-items-center justify-content-center  container-btn"><div class="button text-uppercase" @click="store.growItem">get it now</div></div>
+            <div class="col-3  d-flex align-items-center justify-content-center  container-btn"><div class="button text-uppercase" @click="store.growItem">get it now</div></div>
+            <div class="col-3  d-flex align-items-center justify-content-center  container-btn"><div class="button text-uppercase" @click="store.growItem">get it now</div></div>
             
         </div>
     </div>
 </template>
 
 <script>
+import {store} from '../../store';
+
     export default {
         name: 'TableApp',
 
         data() {
             return {
+
+                store,
+
                 headerTable: [
                     {
                         // image: '',
