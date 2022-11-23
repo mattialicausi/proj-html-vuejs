@@ -69,9 +69,9 @@ import {store} from '../../store';
     }
 
     ul li:hover {
-        color:  rgb(101, 195, 249);
+        color:  #045d8c;
         cursor: pointer;
-        border-bottom: 2px solid  rgb(101, 195, 249);
+        border-bottom: 2px solid  #045d8c;
         transition: background-color linear 1s;
         transition: border-bottom linear 1s;
     }
@@ -83,7 +83,7 @@ import {store} from '../../store';
             margin: 0 15px;
 
             &:hover {
-                color: rgb(101, 195, 249);
+                color: #045d8c;
                 cursor: pointer;
                 transition: color 500ms linear;
             }
@@ -98,7 +98,7 @@ import {store} from '../../store';
         width: 20px;
         height: 20px;
         border-radius: 50%;
-        background-color: rgb(101, 195, 249);
+        background-color: #045d8c;
         display: flex;
         justify-content: center;
         align-items: center;

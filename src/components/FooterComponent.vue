@@ -139,7 +139,7 @@
 
     .container-copyright i:hover{
         cursor: pointer;
-        color: rgb(101, 195, 249);
+        color: #045d8c;
         transition: color linear 500ms;
     }
 
@@ -168,7 +168,7 @@
 
     ul li:hover {
         cursor: pointer;
-        color: rgb(101, 195, 249);
+        color: #045d8c;
     }
 
     .container-footer ul{

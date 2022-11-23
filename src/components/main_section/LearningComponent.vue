@@ -145,15 +145,15 @@ import LearningPossibilities from '../main_section/LaerningPossibilities.vue';
 
     .container-title:hover {
         background-color: rgb(243, 248, 251);
-        color: rgb(101, 195, 249);
-        border-left: 10px solid rgb(101, 195, 249);
+        color: #045d8c;
+        border-left: 10px solid #045d8c;
         cursor: pointer;
     }
 
     .select {
         background-color: rgb(243, 248, 251);
-        color: rgb(101, 195, 249);
-        border-left: 10px solid rgb(101, 195, 249);
+        color: #045d8c;
+        border-left: 10px solid #045d8c;
     }
 
 

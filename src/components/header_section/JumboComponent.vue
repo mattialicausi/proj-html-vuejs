@@ -43,7 +43,7 @@
 @import "https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css";
 
     .myBTN {
-        background-color: rgb(101, 195, 249);
+        background-color: #045d8c;
         padding: 10px;
         color: white;
         border: none;

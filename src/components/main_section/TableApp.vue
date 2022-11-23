@@ -177,14 +177,14 @@ import {store} from '../../store';
     }
 
     .pricing-plan:hover{
-        border-top: 1px solid rgb(101, 195, 249);
+        border-top: 1px solid #045d8c;
         transition: border-top linear 1s;
         cursor: pointer;
 
     }
 
     .button:hover {
-            background-color: rgb(101, 195, 249);
+            background-color: #045d8c;
             cursor: pointer;
             color: white;
             transition: background-color linear 1s;

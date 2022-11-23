@@ -72,7 +72,7 @@
     }
 
     .bg-2 {
-        background-color: rgb(101, 195, 249);
+        background-color: #045d8c;
     }
 
     .container-img {

@@ -122,7 +122,7 @@ import SponsorComponent from './main_section/SponsorComponent.vue';
             flex-flow: column nowrap;
             justify-content: center;
             align-items: center;
-            background-color: rgb(101, 195, 249);
+            background-color: #045d8c;
 
             &:hover {
                 cursor: pointer;

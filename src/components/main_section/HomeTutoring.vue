@@ -32,7 +32,7 @@
         word-wrap: break-word;
     }
     .more{
-        color: rgb(101, 195, 249);
+        color: #045d8c;
         font-size: 14px;
     }
 

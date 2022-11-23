@@ -92,7 +92,7 @@
 
     .container-info {
         text-align: center;
-        color: rgb(101, 195, 249);
+        color: #045d8c;
         .number-info {
            font-size: 2rem; 
         }
