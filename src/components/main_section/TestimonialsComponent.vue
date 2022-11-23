@@ -66,11 +66,30 @@ import TestimonialCard from './TestimonialCard.vue';
                 this.activeIndex = i;
                 console.log('click');
                 console.log(this.activeIndex);
+            },
+
+            nextScroll(){
+            this.activeIndex++
+            if(this.activeIndex > 2){
+                this.activeIndex = 0;
             }
+        },
+
+            autoScroll(){
+                this.scroll = setInterval(()=> {
+                    this.nextScroll();
+                }, 2000)
+            },
+        
+        },
+        mounted () {
+        this.autoScroll();
         }
+ 
+}
         
     
-}
+
 </script>
 
 <style lang="scss" scoped>
