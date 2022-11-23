@@ -8,8 +8,8 @@
         <div class="container-content h-100 col-6">
             <h2>Empowering Children to reach Their Potential.</h2>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum velit quae quaerat reprehenderit iste soluta vitae sit qui fugiat at.</p>
-            <div class="d-flex justify-content-center align-items-center w-100">
-                <div class="container-info mx-2">
+            <div class="d-flex justify-content-center align-items-center w-100 container-events">
+                <div class="container-info mx-3">
                     <div class="number-info">168</div>
                     <div>User Stories</div>
                 </div>
@@ -39,6 +39,11 @@
         height: auto;
         margin-top: 50px;
         margin-bottom: 50px;
+    }
+
+    .container-events {
+        font-family: 'Lobster', cursive;
+        font-size: 2rem;
     }
 
     .container-info {

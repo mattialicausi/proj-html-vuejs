@@ -144,12 +144,11 @@
     }
 
     img {
-        //margin-top: 50px;
         width: 100%;
     }
 
     .container-logo {
-        width: 100px;
+        width: 150px;
         margin-left: 32px;
         margin-bottom: 20px;
     }
@@ -169,6 +168,7 @@
 
     ul li:hover {
         cursor: pointer;
+        color: rgb(101, 195, 249);
     }
 
     .container-footer ul{
@@ -178,9 +178,11 @@
     .container-contact {
         padding-left: 32px;
     }
-    // .lista-cademy li:first-child{
-    //     font-size: 1rem;
-    // }
+
+     ul:first-child li{
+        font-size: 1.2rem;
+        color: white;
+    }
 
     .bordogrigio {
         border: 1px solid gray;
