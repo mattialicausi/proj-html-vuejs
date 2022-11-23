@@ -1,38 +1,45 @@
 <template>
+    <div class="myContainer">
+        <section class="section-category mt-50 row myWrapper justify-content-between">
+            <div class="col-2" v-for="(item, index) in categoryOptions" :key="item.index">
+                <CardCategory :item="item"/>
+            </div>
+        </section>
 
-   <section class="section-category mt-50 row myWrapper justify-content-between">
-        <div class="col-2" v-for="(item, index) in categoryOptions" :key="item.index">
-            <CardCategory :item="item"/>
-        </div>
-   </section>
+        <section class="section-home-tutoring mt-50">
+            <HomeTutoring/>
+        </section>
 
-   <section class="section-home-tutoring mt-50">
-        <HomeTutoring/>
-   </section>
+        <section class="section-empowering mt-50 myWrapper">
+            <EmpoweringComponent/>
+        </section>
 
-   <section class="section-empowering mt-50 myWrapper">
-        <EmpoweringComponent/>
-   </section>
+        <section class="section-testimonials mt-50">
+            <TestimonialsComponent/>
+        </section>
+        
+        <section class="section-learning mt-50">
+            <LearningComponent />
+        </section>
 
-   <section class="section-testimonials mt-50">
-        <TestimonialsComponent/>
-   </section>
-       
-   <section class="section-learning mt-50">
-        <LearningComponent />
-   </section>
+        <section class="section-popular-courses mt-50">
+            <PopularCourses/>
+        </section>
 
-   <section class="section-popular-courses mt-50">
-        <PopularCourses/>
-   </section>
+        <section class="section-plan mt-50">
+            <PlanComponent/>
+        </section>
 
-   <section class="section-plan mt-50">
-        <PlanComponent/>
-   </section>
+        <section class="section-sponsor mt-50">
+            <SponsorComponent/>
+        </section>
+    </div>
 
-   <section class="section-sponsor mt-50">
-        <SponsorComponent/>
-   </section>
+
+    <div class="container-btn-top" @click="scrollToUp()">
+        <i class="fa-solid fa-caret-up"></i>
+        <div class="text-uppercase">top</div>
+    </div>
 
 </template>
 
@@ -79,26 +86,51 @@ import SponsorComponent from './main_section/SponsorComponent.vue';
         };
     },
     components: {
-    CardCategory,
-    HomeTutoring,
-    EmpoweringComponent,
-    TestimonialsComponent,
-    LearningComponent,
-    PopularCourses,
-    PlanComponent,
-    SponsorComponent
-},
+        CardCategory,
+        HomeTutoring,
+        EmpoweringComponent,
+        TestimonialsComponent,
+        LearningComponent,
+        PopularCourses,
+        PlanComponent,
+        SponsorComponent
+    },
+    methods : {
+        scrollToUp () {
+            window.scrollTo(0, 0);
+        }
+    }
 }
 </script>
+
+   
 
 <style lang="scss" scoped>
 @import '../assets/style/general.scss';
 
-    .section-category {
-        // margin-left : 60px;
-        // margin-right : -20px;
-        // justify-content: space-between;
+    .myContainer {
+        position: relative;
+
+        .container-btn-top{
+            position: sticky;
+            bottom: 0;
+            left: 100%;
+            color: white;
+            height: 50px;
+            width: 50px;
+            display: flex;
+            flex-flow: column nowrap;
+            justify-content: center;
+            align-items: center;
+            background-color: rgb(101, 195, 249);
+
+            &:hover {
+                cursor: pointer;
+            }
+        }
     }
+
+
 
     .section-popular-courses, .section-plan{
         background-image: url(../../../public/images/page-background-img.png);

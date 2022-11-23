@@ -1,9 +1,13 @@
 <template>
+  <div class="myContainer">
     <HeaderComponent/>
 
     <MainComponent/>
 
     <FooterComponent/>
+
+  </div>
+
 
 
 </template>
