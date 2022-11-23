@@ -1,5 +1,5 @@
 <template>
-    <div class="myWrapper ">
+    <div class="myWrapper">
         <div class="container-info-jumbo text-center">
             <h1 class="title-jumbo">Contemporary Ideas</h1>
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Excepturi deserunt harum est tenetur corporis, dolorum quas pariatur voluptate non consequuntur autem nesciunt commodi ullam in error mollitia?</p>

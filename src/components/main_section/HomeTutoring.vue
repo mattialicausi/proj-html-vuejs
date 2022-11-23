@@ -37,7 +37,7 @@
     }
 
     .container-img {
-        width: 80%;
+        width: 70%;
         margin: 0 auto;
 
         img {
