@@ -111,8 +111,8 @@ import TestimonialCard from './TestimonialCard.vue';
     .container-indici {
         position: absolute;
         bottom: 20px;
-        right: 40%;
-        left: 40%;
+        right: 45%;
+        left: 45%;
         display: flex;
         justify-content: space-around;
         align-items: center;
@@ -120,7 +120,7 @@ import TestimonialCard from './TestimonialCard.vue';
 
     .content {
         position: absolute;
-        top: 100px;
+        top: 150px;
         left:100px;
         right: 100px;
         display: flex;

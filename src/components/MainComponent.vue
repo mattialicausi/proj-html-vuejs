@@ -38,7 +38,7 @@
 
     <div class="container-btn-top" @click="scrollToUp()">
         <i class="fa-solid fa-caret-up"></i>
-        <div class="text-uppercase">top</div>
+        <div class="text-uppercase top-txt">top</div>
     </div>
 
 </template>
@@ -127,6 +127,10 @@ import SponsorComponent from './main_section/SponsorComponent.vue';
             &:hover {
                 cursor: pointer;
             }
+        }
+
+        .top-txt:hover {
+            display: none;
         }
     }
 

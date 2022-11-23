@@ -12,7 +12,7 @@ $fa-font-path: '../webfonts';
 //DIVISIONE MACROCOMPONENTI
 
 header {
-    height: 100vh;
+    height: 80vh;
     width: 100%;
     color: $text-white;
 }
@@ -22,7 +22,7 @@ header {
 }
 
 .jumbo {
-    height: calc(100vh - 10vh);
+    height: calc(80vh - 10vh);
 }
 
 .myWrapper{
@@ -31,5 +31,5 @@ header {
 }
 
 .section-testimonials {
-    height: 70vh;
+    height: 50vh;
 }

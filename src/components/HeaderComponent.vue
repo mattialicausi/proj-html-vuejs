@@ -82,9 +82,7 @@ import NavBarApp from './header_section/NavBarApp.vue';
 <style lang="scss" scoped>
 @import '../assets/style/general.scss';
     header {
-        //background-image: url(../../public/images/course-9-f-img.jpg);
         background-size: cover;
-
     }
 
     .bg1{
@@ -104,9 +102,9 @@ import NavBarApp from './header_section/NavBarApp.vue';
 
     .container-indici {
         position: absolute;
-        bottom: 20px;
-        left: 40%;
-        right: 40%;
+        top: 72%;
+        left: 45%;
+        right: 45%;
         display: flex;
         justify-content: space-around;
         align-items: center;
