@@ -8,7 +8,9 @@
             <div class="header-card">
                 <div class="d-flex align-items-center justify-content-between mt-2">
                     <h4>{{item[i].title}}</h4>
-                    <div class="text-uppercase button rounded-3">{{item[i].status}}</div>
+                    <div class="text-uppercase button-status rounded-pill" :class="item[i].status === 'free' ? 'bg-1' : 'bg-2'">
+                        {{item[i].status}}
+                    </div>
                 </div>
                 
                 <div class="subtitle cgray">{{item[i].subtitle}}</div>
@@ -44,16 +46,6 @@
             index: Number,
             popularOptions: Object
         },
-
-        // methods: {
-        //     getI (){
-        //         console.log(this.i)
-        //     }
-        // },
-        // mounted() {
-        //     this.getI()
-             
-        // }
  
     }
 </script>
@@ -69,8 +61,18 @@
         color: gray;
     }
 
-    .button {
-        padding: 5px;
+    .button-status {
+        padding: 3px 5px;
+        background-color: yellow;
+        color: white;
+    }
+
+    .bg-1 {
+        background-color: rgb(250, 214, 94);
+    }
+
+    .bg-2 {
+        background-color: rgb(101, 195, 249);
     }
 
     .container-img {
